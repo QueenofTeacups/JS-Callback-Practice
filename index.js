@@ -2,10 +2,10 @@ const inventory = newInventory()
 move(inventory).to(0, 0)
 
 const character = newImage('assets/green-character/static.gif')
-let direction = null;
-let x = 100;
-let y = 250;
-move(character).withArrowKeys(100, 250)
+// let direction = null;
+// let x = 100;
+// let y = 250;
+// move(character).withArrowKeys(100, 250)
 
 function handleDirectionChange(direction){
     if(direction === null){
@@ -47,22 +47,22 @@ function moveCharacter(){
     character.style.bottom = y + 'px'
 }
 
-setInterval(function(){ 
-    if(direction === 'west'){
-        x = x - 1
-    }
-    if(direction === 'north'){
-        y = y + 1
-    }
-    if(direction === 'east'){
-        x = x + 1
-    }
-    if(direction === 'south'){
-        y = y - 1
-    }
-    character.style.left = x + 'px'
-    character.style.bottom = y + 'px'
-}, 1)
+//setInterval(function(){ 
+//    if(direction === 'west'){
+//        x = x - 1
+//    }
+//    if(direction === 'north'){
+//        y = y + 1
+//    }
+//    if(direction === 'east'){
+//        x = x + 1
+//    }
+//    if(direction === 'south'){
+//        y = y - 1
+//    }
+//    character.style.left = x + 'px'
+//    character.style.bottom = y + 'px'
+//}, 1)
 
 document.addEventListener('keydown', function(e){ 
     if(e.repeat) return;
@@ -84,12 +84,6 @@ document.addEventListener('keydown', function(e){
 document.addEventListener('keyup', function(e){
     direction = null
 })
-
-
-
-
-
-
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)

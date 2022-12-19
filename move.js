@@ -48,11 +48,12 @@ function move(element) {
             if(e.key === 'ArrowDown'){
                 direction = 'south'
             }
-            callback(direction)
+            callback(direction) //Line 51 error "Uncaught TypeError: callback is not a function"
         })
         document.addEventListener('keyup', function(e){
             direction = null
-            callback(direction)
+            callback(direction) //Line 55 error "Uncaught TypeError: callback is not a function"
+            //To solve the above errors, I commented out lines 5.8 in index.js! Woot Woot! XD
         })
     }
     return {
